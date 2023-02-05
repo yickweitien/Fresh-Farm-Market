@@ -1,0 +1,113 @@
+﻿@page
+@model IndexModel
+@using Fresh_Farm_Market.Model
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+
+@*<h1>Hi There</h1>*@
+
+
+@{
+    if (SignInManager.IsSignedIn(User))
+    {
+        <h1>@Model.Username</h1>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div>
+                    <label class="col-sm-2 col-form-label">Email: </label>
+                    <label>@Model.Email</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div>
+                    <label class="col-sm-2 col-form-label">Full Name: </label>
+                    <label>@Model.FullName</label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8">
+                <div>
+                    <label class="col-sm-2 col-form-label">Gender: </label>
+                    <label>@Model.Gender</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div>
+                    <label class="col-sm-2 col-form-label">Phone Number: </label>
+                    <label>@Model.PhoneNumber</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div>
+                    <label class="col-sm-2 col-form-label">Delivery Address: </label>
+                    <label>@Model.DeliveryAddress</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div>
+                    <label class="col-sm-2 col-form-label">About Me: </label>
+                    <label>@Model.AboutMe</label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8">
+                <div>
+                    <label class="col-sm-2 col-form-label">Credit Card: </label>
+                    <label>@Model.CreditCard</label>
+                </div>
+            </div>
+        </div>
+
+
+        @*<div class="col-md-4">
+            <class ="form-control" onchange="showImgPreview(this)" /><br />
+            <img id="imgPreview" class="rounded-circle"
+                 style="height:300px;width:300px;object-fit:cover"
+                 src="@(string.IsNullOrEmpty(Model.Photo) ? "/uploads/member.png" : Model.Photo)"
+        </div>*@
+
+
+        <div>
+            <p>Profile Photo</p> <br />
+            <img src="@(string.IsNullOrEmpty(Model.Photo)? "/uploads/member.png":Model.Photo)" class="rounded-circle" style="height:200px;width:200px;object-fit:cover" onerror="this.src='/uploads/member.png'" />
+        </div>
+
+
+    }
+
+    else
+    {
+        <div class="text-center">
+            <h1 class="display-4">Welcome!</h1>
+            <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        </div>
+
+    }
+}
+
+
+

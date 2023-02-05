@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fresh Farm Market", "Fresh Farm Market\Fresh Farm Market.csproj", "{A09D3D8C-7CA2-435D-BB0A-4C736482DFC7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A09D3D8C-7CA2-435D-BB0A-4C736482DFC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A09D3D8C-7CA2-435D-BB0A-4C736482DFC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A09D3D8C-7CA2-435D-BB0A-4C736482DFC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A09D3D8C-7CA2-435D-BB0A-4C736482DFC7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {347C9EDF-420A-44FE-A34E-BE52323C69EC}
+	EndGlobalSection
+EndGlobal
